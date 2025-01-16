@@ -1,0 +1,10 @@
+{%extends "layout.html" %}
+{% block content %}
+    {% for post in db %}
+        <h1>{{post.title}}</h1>
+        <p>By {{post.author}}</p>
+        <p>And price is {{post.price}}</p>
+    {% endfor %}
+{% endblock content %}
+<!--{% extends "layout.html" %}: This tells Jinja2 that home.html inherits from layout.html.-->
+<!--{% block content %}: This overrides the content block in layout.html with the specific content for the home page.-->
